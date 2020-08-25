@@ -15,19 +15,15 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
-  
+
   }
 
-  // tslint:disable-next-line: typedef
-  //
+
+
   registerToggle(){
     this.registerMode = true;
   }
-
-  // tslint:disable-next-line: typedef
-
-
-  cancelRegisterMode(registerMode:boolean) {
+  cancelRegisterMode(registerMode: boolean) {
     this.registerMode = registerMode;
   }
 

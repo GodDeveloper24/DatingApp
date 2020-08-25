@@ -10,6 +10,7 @@ export class AuthService {
 
     constructor(private http: HttpClient) { }
 
+    // tslint:disable-next-line: typedef
     login(model: any)
     {
 
@@ -22,7 +23,8 @@ export class AuthService {
       );
     }
 
-    register(model:any) {
+    // tslint:disable-next-line: typedef
+    register(model: any) {
       return this.http.post(this.baseurl + 'register', model);
     }
 

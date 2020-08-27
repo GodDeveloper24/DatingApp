@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DatingApp.API.Migrations
 {
-    public partial class extendeduserclass : Migration
+    public partial class neumigracion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

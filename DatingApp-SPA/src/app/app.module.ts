@@ -19,8 +19,8 @@ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
-import {MemberDetailResolver} from './_resolvers/member-detail.resolver';
-import {MemberListResolver} from './_resolvers/member';
+import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
+import { MemberListResolver } from './_resolvers/member';
 import { appRoutes } from './routes';
 import { tokenName } from '@angular/compiler';
 
@@ -40,7 +40,7 @@ export function tokenGetter() {
     ListsComponent,
     MessagesComponent,
     MemberCardComponent,
-    MemberDetailComponent
+    MemberDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +59,12 @@ export function tokenGetter() {
       },
     }),
   ],
-  providers: [AuthService, ErrorInterceptorProvider, MemberDetailResolver,MemberListResolver],
+  providers: [
+    AuthService,
+    ErrorInterceptorProvider,
+    MemberDetailResolver,
+    MemberListResolver,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

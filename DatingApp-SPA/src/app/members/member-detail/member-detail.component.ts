@@ -4,7 +4,7 @@ import { UserService } from 'src/app/_services/user.service';
 import { AlertifyService } from 'src/app/_services/alertify.service';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryOptions, NgxGalleryImage } from '@kolkov/ngx-gallery';
-import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
+import { NgxGalleryAnimation } from '@kolkov/ngx-gallery';
 
 @Component({
   selector: 'app-member-detail',
@@ -22,6 +22,7 @@ export class MemberDetailComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.route.data.subscribe((data) => {
       this.user = data.user;
@@ -30,17 +31,17 @@ export class MemberDetailComponent implements OnInit {
     this.galleryOptions = [
       {
         width: '500px',
-        height:'500px',
-        imagePercent:100,
-        thumbnailsColumns:4,
-        imageAnimation:NgxGalleryAnimation.Slide,
-        preview:false
-      }
+        height: '500px',
+        imagePercent: 100,
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide,
+        preview: false,
+      },
     ];
     this.galleryImages = this.getImages();
-
   }
   // members/4
+  // tslint:disable-next-line: typedef
   getImages() {
     const imageUrls = [];
     for (const photo of this.user.photos) {
@@ -48,12 +49,9 @@ export class MemberDetailComponent implements OnInit {
         small: photo.url,
         medium: photo.url,
         big: photo.url,
-        description: photo.description
+        description: photo.description,
       });
     }
     return imageUrls;
   }
-
-
 }
-

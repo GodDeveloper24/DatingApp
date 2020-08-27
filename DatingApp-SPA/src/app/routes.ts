@@ -20,13 +20,13 @@ export const appRoutes: Routes = [
     children: [
       {
         path: 'members',
-        component: MemberListComponent, resolve: {users:  MemberListResolver},
-
+        component: MemberListComponent,
+        resolve: { users: MemberListResolver },
       },
       {
         path: 'members/:id',
-        component: MemberDetailComponent, resolve:{user: MemberDetailResolver},
-
+        component: MemberDetailComponent,
+        resolve: { user: MemberDetailResolver },
       },
       {
         path: 'messages',
@@ -36,11 +36,11 @@ export const appRoutes: Routes = [
         path: 'lists',
         component: ListsComponent,
       },
-    ]
+    ],
   },
   {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
-  }
+  },
 ];

@@ -23,6 +23,7 @@ import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member';
 import {MemberEditComponent} from './members/member-edit/member-edit.component';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { appRoutes } from './routes';
 import { tokenName } from '@angular/compiler';
 
@@ -67,7 +68,8 @@ export function tokenGetter() {
     ErrorInterceptorProvider,
     MemberDetailResolver,
     MemberListResolver,
-    MemberEditResolver
+    MemberEditResolver,
+    PreventUnsavedChanges
   ],
   bootstrap: [AppComponent],
 })

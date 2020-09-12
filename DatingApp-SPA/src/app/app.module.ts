@@ -29,6 +29,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { appRoutes } from './routes';
 import { tokenName } from '@angular/compiler';
+import { TimeagoModule } from 'ngx-timeago';
 
 // tslint:disable-next-line: typedef
 export function tokenGetter() {
@@ -48,7 +49,7 @@ export function tokenGetter() {
     MemberCardComponent,
     MemberDetailComponent,
     MemberEditComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +64,7 @@ export function tokenGetter() {
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
     FileUploadModule,
+    TimeagoModule.forRoot(),
     JwtModule.forRoot({
       config: {
         tokenGetter,

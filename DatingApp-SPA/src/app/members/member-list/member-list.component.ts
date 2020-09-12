@@ -15,6 +15,7 @@ export class MemberListComponent implements OnInit {
 
   constructor(private userService: UserService, private alertify: AlertifyService, private route: ActivatedRoute) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.users = data.users;

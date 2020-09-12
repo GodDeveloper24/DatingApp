@@ -91,7 +91,7 @@ export class PhotoEditorComponent implements OnInit {
           this.alertify.success('Photo has been deleted');
       },
         error => {
-          this.alertify.error("Failed to delete the photo");
+          this.alertify.error('Failed to delete the photo');
         });
     });
   }

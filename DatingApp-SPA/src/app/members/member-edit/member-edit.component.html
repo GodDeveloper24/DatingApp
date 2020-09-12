@@ -28,7 +28,7 @@
                 Last active
             </strong>
             <p>
-              {{user.lastActive}}
+              {{user.lastActive | timeago}}
             </p>
           </div>
           <div>
@@ -36,7 +36,7 @@
                 Member since:
             </strong>
             <p>
-              {{user.created}}
+              {{user.created | date: 'mediumDate'}}
             </p>
           </div>
         </div>

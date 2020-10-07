@@ -32,6 +32,7 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { appRoutes } from './routes';
 import { tokenName } from '@angular/compiler';
 import { TimeagoModule } from 'ngx-timeago';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 // tslint:disable-next-line: typedef
 export function tokenGetter() {
@@ -83,6 +84,7 @@ export function tokenGetter() {
     MemberDetailResolver,
     MemberListResolver,
     MemberEditResolver,
+    ListsResolver,
     PreventUnsavedChanges
   ],
   bootstrap: [AppComponent],

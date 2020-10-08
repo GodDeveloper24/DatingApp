@@ -33,6 +33,9 @@ import { appRoutes } from './routes';
 import { tokenName } from '@angular/compiler';
 import { TimeagoModule } from 'ngx-timeago';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { MemberMessagesComponent} from './members/member-messages/member-messages.component';
+
 
 // tslint:disable-next-line: typedef
 export function tokenGetter() {
@@ -53,6 +56,7 @@ export function tokenGetter() {
     MemberDetailComponent,
     MemberEditComponent,
     PhotoEditorComponent,
+    MemberMessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +89,8 @@ export function tokenGetter() {
     MemberListResolver,
     MemberEditResolver,
     ListsResolver,
-    PreventUnsavedChanges
+    PreventUnsavedChanges,
+    MessagesResolver
   ],
   bootstrap: [AppComponent],
 })

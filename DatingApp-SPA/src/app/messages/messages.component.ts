@@ -28,6 +28,7 @@ export class MessagesComponent implements OnInit {
     });
   }
 
+  // tslint:disable-next-line: typedef
   loadMessages() {
     this.userService.getMessages(this.authService.decodedToken.nameid, this.pagination.currentPage, 
       this.pagination.itemsPerPage, this.messageContainer)

@@ -20,6 +20,7 @@ export class AuthService {
 
     constructor(private http: HttpClient) { }
 
+    // tslint:disable-next-line: typedef
     changeMemberPhoto(photoUrl: string)
     {
       this.photoUrl.next(photoUrl);
@@ -59,12 +60,12 @@ export class AuthService {
       const userRoles = this.decodedToken.role as Array<string>;
 
       allowedRoles.forEach(element => {
-        if(userRoles.includes(element))
+        if (userRoles.includes(element))
         {
           isMatch = true;
           return;
         }
-    
+
       });
       return isMatch;
     }
